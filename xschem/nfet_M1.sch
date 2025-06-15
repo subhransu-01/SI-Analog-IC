@@ -9,13 +9,13 @@ N -90 -40 -30 -40 {lab=vg}
 N 10 -90 10 -70 {lab=vd}
 N 10 -90 140 -90 {lab=vd}
 N 140 -90 140 -30 {lab=vd}
-N 140 30 140 70 {lab=#net1}
-N -90 70 140 70 {lab=#net1}
-N -90 40 -90 70 {lab=#net1}
-N 10 -10 10 70 {lab=#net1}
-N 10 -40 40 -40 {lab=#net1}
-N 40 -40 40 20 {lab=#net1}
-N 10 20 40 20 {lab=#net1}
+N 140 30 140 70 {lab=GND}
+N -90 70 140 70 {lab=GND}
+N -90 40 -90 70 {lab=GND}
+N 10 -10 10 70 {lab=GND}
+N 10 -40 40 -40 {lab=GND}
+N 40 -40 40 20 {lab=GND}
+N 10 20 40 20 {lab=GND}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -10 -40 0 0 {name=M1
 L=0.15
 W=1
@@ -42,6 +42,8 @@ value="
 * ngspice commands
 .control
  op
-
+ plot v(vd)
+ plot v(vg)
 .endc
 "}
+C {gnd.sym} 50 70 0 0 {name=l1 lab=GND}
