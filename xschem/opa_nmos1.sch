@@ -4,8 +4,8 @@ K {}
 V {}
 S {}
 E {}
-N 870 -420 940 -420 {lab=vip}
-N 870 -380 940 -380 {lab=vim}
+N 1020 -360 1090 -360 {lab=vip}
+N 1500 -360 1570 -360 {lab=vim}
 N 990 -110 1360 -110 {lab=ib5u}
 N 830 -200 950 -200 {lab=ib5u}
 N 950 -200 950 -140 {lab=ib5u}
@@ -30,13 +30,16 @@ N 860 -690 1560 -690 {lab=AVDD}
 N 1560 -690 1560 -550 {lab=AVDD}
 N 1460 -550 1560 -550 {lab=AVDD}
 N 1460 -690 1460 -580 {lab=AVDD}
-N 1170 -550 1420 -550 {lab=#net2}
+N 1170 -550 1420 -550 {lab=AVDD}
 N 1130 -690 1130 -580 {lab=AVDD}
 N 1030 -550 1130 -550 {lab=AVDD}
 N 1030 -690 1030 -550 {lab=AVDD}
 N 1460 -450 1590 -450 {lab=vout}
-C {iopin.sym} 870 -420 2 0 {name=p3 lab=vip}
-C {iopin.sym} 870 -380 2 0 {name=p4 lab=vim}
+N 1130 -360 1460 -360 {lab=ib5u}
+N 1290 -360 1290 -280 {lab=ib5u}
+N 1290 -690 1290 -550 {lab=AVDD}
+C {iopin.sym} 1020 -360 2 0 {name=p3 lab=vip}
+C {iopin.sym} 1570 -360 0 0 {name=p4 lab=vim}
 C {iopin.sym} 1590 -450 0 0 {name=p7 lab=vout}
 C {iopin.sym} 830 -200 2 0 {name=p8 lab=ib5u}
 C {iopin.sym} 860 -690 2 0 {name=p1 lab=AVDD
