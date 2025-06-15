@@ -71,6 +71,6 @@ value="
   DC Vds 0 1.8 0.05
   PLOT abs(vds#branch)
   AC DEC 100 100 1000
-  PLOT '1/vm(vds#branch)'
+  **PLOT '1/vm(vds#branch)'
  .ENDC
 "}
