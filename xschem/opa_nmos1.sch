@@ -91,3 +91,18 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {lab_wire.sym} 1130 -440 0 0 {name=p5 sig_type=std_logic lab=vom}
+C {devices/code.sym} 360 -160 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+"
+spice_ignore=false}
+C {simulator_commands_shown.sym} 150 -720 0 0 {name=COMMANDS
+simulator=ngspice
+only_toplevel=false 
+value="
+* ngspice commands
+ 
+"}
