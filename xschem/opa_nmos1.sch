@@ -20,24 +20,26 @@ N 950 -50 1490 -50 {lab=AVSS}
 N 1490 -110 1490 -50 {lab=AVSS}
 N 1400 -110 1490 -110 {lab=AVSS}
 N 1400 -80 1400 -50 {lab=AVSS}
-N 1130 -330 1130 -280 {lab=ib5u}
-N 1130 -280 1460 -280 {lab=ib5u}
-N 1460 -330 1460 -280 {lab=ib5u}
-N 1130 -520 1130 -390 {lab=#net1}
+N 1130 -330 1130 -280 {lab=#net1}
+N 1130 -280 1460 -280 {lab=#net1}
+N 1460 -330 1460 -280 {lab=#net1}
+N 1130 -520 1130 -390 {lab=vom}
 N 1460 -520 1460 -390 {lab=vout}
-N 1290 -280 1290 -110 {lab=ib5u}
 N 860 -690 1560 -690 {lab=AVDD}
 N 1560 -690 1560 -550 {lab=AVDD}
-N 1460 -550 1560 -550 {lab=AVDD}
 N 1460 -690 1460 -580 {lab=AVDD}
-N 1170 -550 1420 -550 {lab=AVDD}
+N 1170 -550 1420 -550 {lab=vom}
 N 1130 -690 1130 -580 {lab=AVDD}
-N 1030 -550 1130 -550 {lab=AVDD}
 N 1030 -690 1030 -550 {lab=AVDD}
 N 1460 -450 1590 -450 {lab=vout}
-N 1130 -360 1460 -360 {lab=ib5u}
-N 1290 -360 1290 -280 {lab=ib5u}
-N 1290 -690 1290 -550 {lab=AVDD}
+N 1290 -550 1290 -490 {lab=vom}
+N 1130 -490 1290 -490 {lab=vom}
+N 1400 -280 1400 -140 {lab=#net1}
+N 1030 -550 1130 -550 {lab=AVDD}
+N 1460 -550 1560 -550 {lab=AVDD}
+N 1130 -360 1190 -360 {lab=#net1}
+N 1190 -360 1460 -360 {lab=#net1}
+N 1310 -360 1310 -280 {lab=#net1}
 C {iopin.sym} 1020 -360 2 0 {name=p3 lab=vip}
 C {iopin.sym} 1570 -360 0 0 {name=p4 lab=vim}
 C {iopin.sym} 1590 -450 0 0 {name=p7 lab=vout}
@@ -68,23 +70,24 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1480 -360 0 1 {name=M4
-L=0.15
-W=1
-nf=1 mult=1
+L=2
+W=4
+nf=1 mult=5
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8.sym} 1150 -550 2 0 {name=M11
-L=0.15
-W=1
-nf=1 mult=1
+C {sky130_fd_pr/pfet_01v8.sym} 1150 -550 0 1 {name=M11
+L=2
+W=5
+nf=1 mult=2
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8.sym} 1440 -550 2 1 {name=M5
-L=0.15
-W=1
-nf=1 mult=1
+C {sky130_fd_pr/pfet_01v8.sym} 1440 -550 0 0 {name=M5
+L=2
+W=5
+nf=1 mult=2
 model=pfet_01v8
 spiceprefix=X
 }
+C {lab_wire.sym} 1130 -440 0 0 {name=p5 sig_type=std_logic lab=vom}
